@@ -22,7 +22,11 @@ requirements:
     - python
     - pybind11
     - pip
-    - setuptools
+    - meson-python
+    - ninja
+    - pkg-config
+    - python-build
+    - cython
   run:
     - python
 
