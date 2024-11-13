@@ -1,5 +1,5 @@
 {% set name = "kvh" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kvh-{{ version }}.tar.gz
-  sha256: 58c683f0c51aafb6d0139c59ecc288fca6bf7b4461ae11e6679973c24d85e81e
+  sha256: 7dc4b410058ebec859c24efa18485148f50af0ed7577115119ccdca1099c1472
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 4
+  number: 0
 
 requirements:
   build:
