@@ -22,7 +22,9 @@ requirements:
     - python
     - pybind11
     - pip
-    - setuptools
+    - meson
+    - meson-python
+    - ninja
   run:
     - python
 
