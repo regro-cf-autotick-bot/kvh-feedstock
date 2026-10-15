@@ -4,3 +4,10 @@ github:
 conda_forge_output_validation: true
 conda_build:
   pkg_format: '2'
+platforms:
+  - linux_64
+  - win_64
+  - osx_64
+  - osx_arm64
+build_platform:
+  osx_arm64: osx_64
