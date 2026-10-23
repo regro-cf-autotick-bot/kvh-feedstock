@@ -10,9 +10,16 @@ source:
   sha256: 7f8d9b7c5c4b3abc7784cbb9e6367479dd9cdaea8a1b378dbbf23f337ee89998
 
 build:
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation -Csetup-args="$MESON_ARGS"
+  script: |
+    echo "=== DEBUG INFO ==="
+    echo "PYTHON: {{ PYTHON }}"
+    which python
+    python --version
+    echo "=================="
+    {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation -Csetup-args=${MESON_ARGS// / -Csetup-args=}
+  #script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation -Csetup-args="$MESON_ARGS"
   number: 3
-  skip: true  # [not (osx and arm64 and py == 312)]
+  #skip: true  # [not (osx and arm64 and py == 312)]
 
 requirements:
   build:
